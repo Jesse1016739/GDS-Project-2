@@ -1,7 +1,31 @@
 fileFormatVersion: 2
 guid: 11fa203403bfce74d963624a4ae221cb
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: -4211945405700141353
+    second: Car Sprite (1)_0
+  - first:
+      213: 5130518695133896202
+    second: Car Sprite (1)_1
+  - first:
+      213: -1893148233902414950
+    second: Car Sprite (1)_2
+  - first:
+      213: 5484184474563181468
+    second: Car Sprite (1)_3
+  - first:
+      213: 814271102818417199
+    second: Car Sprite (1)_4
+  - first:
+      213: 60748739996271663
+    second: Car Sprite (1)_5
+  - first:
+      213: 36134801968654519
+    second: Car Sprite (1)_6
+  - first:
+      213: -8375422836618607475
+    second: Car Sprite (1)_7
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -40,7 +64,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -97,7 +121,49 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Car Sprite (1)_0
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 4
+        width: 112
+        height: 92
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7de87e728f92c85c0800000000000000
+      internalID: -4211945405700141353
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Car Sprite (1)_1
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 4
+        width: 112
+        height: 92
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a0ed4f01293433740800000000000000
+      internalID: 5130518695133896202
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
