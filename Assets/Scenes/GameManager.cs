@@ -23,6 +23,7 @@ public class GameManager : MonoBehaviour
                 var rig = hitInfo.collider.GetComponent<Rigidbody>();
                 if (rig != null)
                 {
+                    hitInfo.collider.GetComponent<Collider>().enabled = false;
                     rig.GetComponent<MeshRenderer>().material = hitMaterial;
                     rig.AddForceAtPosition(ray.direction * 50f, hitInfo.point, ForceMode.VelocityChange);
                 }
