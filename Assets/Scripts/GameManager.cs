@@ -5,6 +5,8 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     public Material hitMaterial;
+
+    public scoringSys scoreSys;
     void Start()
     {
         
@@ -23,9 +25,12 @@ public class GameManager : MonoBehaviour
                 var rig = hitInfo.collider.GetComponent<Rigidbody>();
                 if (rig != null)
                 {
-                    hitInfo.collider.GetComponent<Collider>().enabled = false;
-                    rig.GetComponent<MeshRenderer>().material = hitMaterial;
-                    rig.AddForceAtPosition(ray.direction * 50f, hitInfo.point, ForceMode.VelocityChange);
+                    scoreSys.currentScore += 1;
+                    Destroy(hitInfo.collider.gameObject);
+                    
+                    //hitInfo.collider.GetComponent<Collider>().enabled = false;
+                    //rig.GetComponent<MeshRenderer>().material = hitMaterial;
+                    //rig.AddForceAtPosition(ray.direction * 50f, hitInfo.point, ForceMode.VelocityChange);
                 }
             }
         }
