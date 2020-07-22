@@ -25,8 +25,12 @@ public class GameManager : MonoBehaviour
                 var rig = hitInfo.collider.GetComponent<Rigidbody>();
                 if (rig != null)
                 {
-                    scoreSys.currentScore += 1;
-                    Destroy(hitInfo.collider.gameObject);
+                    if (hitInfo.collider.tag == "Target") //&& hitInfo.collider.gameObject.GetComponent<MeshRenderer>().enabled == true)
+                    {
+                        scoreSys.currentScore += 1;
+                        Destroy(hitInfo.collider.gameObject);
+                    }
+
                     
                     //hitInfo.collider.GetComponent<Collider>().enabled = false;
                     //rig.GetComponent<MeshRenderer>().material = hitMaterial;
