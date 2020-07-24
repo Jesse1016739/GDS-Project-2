@@ -3,10 +3,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.UI;
 
-public class scoringSys : MonoBehaviour
+public class ScoringSys : MonoBehaviour
 {
-    public float currentScore = 0000000000;
-    public float maxScore = 9999999999;
+    public float currentScore = 0;
+    public float maxScore = 999;
 
     public Text scoreText;
 

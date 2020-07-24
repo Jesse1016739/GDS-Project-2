@@ -13,6 +13,8 @@ public class TargetSpawning : MonoBehaviour
     public float respawnTimer;
     public float respawnCountdown;
 
+    public bool playerReset;
+
     void Update()
     {
 
@@ -29,16 +31,35 @@ public class TargetSpawning : MonoBehaviour
             isClear = true;
         }
 
+        if(playerReset == true)
+        {
+
+            for (int i = 0; i < targets.Length; i++)
+            {
+                Destroy(targets[i].gameObject);
+                Debug.Log("Destroyed targets");
+            }
+        }
+
         //If it is clear, it be
         if (isClear == true)
         {
             //Minuses time away from the countdown.
-            respawnCountdown -= Time.deltaTime;
+            //respawnCountdown -= Time.deltaTime;
+            playerReset = false;
+            for (int i = 0; i < targetSpawnPoints.Length; i++)
+            {
+                Instantiate(typeOfTarget, targetSpawnPoints[i].transform.transform);
+                Debug.Log("Spawned new targets");
+            }
+            isClear = false;
+
 
             //StartCoroutine("targetReset");
         }
 
         //When the countdown hits 0 or less, it will spawn new targets.
+        /*
         if (respawnCountdown <= 0)
         {
             Instantiate(typeOfTarget, targetSpawnPoints[0].transform.transform);
@@ -48,6 +69,7 @@ public class TargetSpawning : MonoBehaviour
             isClear = false;
             respawnCountdown = respawnTimer;
         }
+        */
     }
 
     //Old code that decided to say no

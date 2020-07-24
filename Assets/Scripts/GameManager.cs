@@ -6,7 +6,7 @@ public class GameManager : MonoBehaviour
 {
     public Material hitMaterial;
 
-    public scoringSys scoreSys;
+    public ScoringSys scoreSys;
     void Start()
     {
         

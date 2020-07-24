@@ -7,7 +7,8 @@ public class PlayerMovement : MonoBehaviour
 	Rigidbody rb;
 	float dirX;
 	float dirZ;
-	public float moveSpeed = 0.05f;
+	public float editSpeed = 0.1f;
+	float moveSpeed = 0.1f;
 	public bool motionControls;
 	public bool isColliding = false;
 
@@ -27,7 +28,7 @@ public class PlayerMovement : MonoBehaviour
 		
 		else if(isColliding == false)
 		{
-			moveSpeed = 0.01f;
+			moveSpeed = editSpeed;
 		}
 	}
 
