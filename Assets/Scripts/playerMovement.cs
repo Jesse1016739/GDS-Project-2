@@ -2,12 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class playerMovement : MonoBehaviour
+public class PlayerMovement : MonoBehaviour
 {
 	Rigidbody rb;
 	float dirX;
-	float moveSpeed = 10f;
-
+	float dirZ;
+	public float moveSpeed = 0.05f;
+	public bool motionControls;
 	// Use this for initialization
 	void Start()
 	{
@@ -17,13 +18,19 @@ public class playerMovement : MonoBehaviour
 	// Update is called once per frame
 	void Update()
 	{
-		dirX = Input.acceleration.x * moveSpeed;
-		transform.position = new Vector3(Mathf.Clamp(transform.position.x, -2, 2f), transform.position.y);
+		
 	}
 
 	void FixedUpdate()
 	{
-		rb.AddForce(0, 0, 2000 * Time.deltaTime);
-		rb.velocity = new Vector2(dirX, 0f);
+		if (motionControls){ dirX = Input.acceleration.x * moveSpeed; }
+        else { dirX = Input.GetAxis("Horizontal"); }
+		dirZ = transform.position.z + moveSpeed;
+			if (dirZ > 4.5f)
+			{
+				//need to trigger next level generation
+				dirZ = 0.8f;
+			}
+		transform.position = new Vector3(Mathf.Clamp(transform.position.x + dirX, -2, 2f), transform.position.y, transform.position.z + moveSpeed);
 	}
 }

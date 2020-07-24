@@ -231,7 +231,7 @@ PrefabInstance:
     - target: {fileID: 763320545269640652, guid: e1f1370fbf818c546a162bbd56a95a79,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.51
+      value: 0.35
       objectReference: {fileID: 0}
     - target: {fileID: 763320545269640652, guid: e1f1370fbf818c546a162bbd56a95a79,
         type: 3}
@@ -864,6 +864,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 759a4d52f90aa2648a5439db23b64329, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  moveSpeed: 0.05
+  motionControls: 0
 --- !u!54 &748781942
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1203,7 +1205,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 2.56, z: -3.15}
+  m_LocalPosition: {x: -0.13, y: 2.56, z: -3.15}
   m_LocalScale: {x: 5, y: 5, z: 5}
   m_Children: []
   m_Father: {fileID: 1638150471}
@@ -1438,8 +1440,8 @@ GameObject:
   - component: {fileID: 1638150470}
   - component: {fileID: 1638150469}
   - component: {fileID: 1638150468}
-  - component: {fileID: 1638150467}
   - component: {fileID: 1638150472}
+  - component: {fileID: 1638150473}
   m_Layer: 0
   m_Name: TempPlayer
   m_TagString: Player
@@ -1447,19 +1449,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1638150467
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1638150466}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0436f5c9454e9b844bf18dc16ff3ec2c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  force: 0.07
 --- !u!65 &1638150468
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1528,7 +1517,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1638150466}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.19, z: 0.8}
+  m_LocalPosition: {x: 0.026, y: -0.19, z: 0}
   m_LocalScale: {x: 0.2, y: 0.2, z: 0.2}
   m_Children:
   - {fileID: 963194228}
@@ -1549,8 +1538,22 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 112
+  m_Constraints: 126
   m_CollisionDetection: 1
+--- !u!114 &1638150473
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1638150466}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 759a4d52f90aa2648a5439db23b64329, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 0.2
+  motionControls: 1
 --- !u!1 &1686256633
 GameObject:
   m_ObjectHideFlags: 0
@@ -1994,7 +1997,7 @@ PrefabInstance:
     - target: {fileID: 763320545269640652, guid: e1f1370fbf818c546a162bbd56a95a79,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.51
+      value: 0.35
       objectReference: {fileID: 0}
     - target: {fileID: 763320545269640652, guid: e1f1370fbf818c546a162bbd56a95a79,
         type: 3}
