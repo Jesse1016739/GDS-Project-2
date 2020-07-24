@@ -2185,7 +2185,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hitMaterial: {fileID: 2100000, guid: 96a4d92c09415fc4ab73cebc49934e0c, type: 2}
-  scoreSys: {fileID: 748781943}
+  scoreSys: {fileID: 1638150467}
 --- !u!1 &598126705
 GameObject:
   m_ObjectHideFlags: 0
@@ -2821,8 +2821,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentScore: 0
-  maxScore: 1e+10
-  scoreText: {fileID: 1771422207}
+  maxScore: 999
+  scoreText: {fileID: 0}
 --- !u!1001 &770824378
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5865,6 +5865,7 @@ GameObject:
   - component: {fileID: 1638150468}
   - component: {fileID: 1638150472}
   - component: {fileID: 1638150473}
+  - component: {fileID: 1638150467}
   m_Layer: 0
   m_Name: TempPlayer
   m_TagString: Player
@@ -5872,6 +5873,21 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &1638150467
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1638150466}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 911a1c57b65908c4bb357a39ad6f7f7d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentScore: 0
+  maxScore: 999
+  scoreText: {fileID: 1771422207}
 --- !u!65 &1638150468
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5975,8 +5991,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 759a4d52f90aa2648a5439db23b64329, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  editSpeed: 0.03
-  motionControls: 0
+  editSpeed: 0.05
+  motionControls: 1
   isColliding: 0
 --- !u!1 &1686256633
 GameObject:
